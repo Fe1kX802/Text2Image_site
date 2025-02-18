@@ -1,0 +1,86 @@
+body {
+    background: url(../image/background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: 'Roboto', Arial, sans-serif;
+    line-height: 1.6;
+    color: #f4f4f4;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #333;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+header {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1));
+    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 32px;
+    flex-direction: row;
+    
+    display: flex;
+    justify-content: space-between;
+    justify-items: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.header-logo {
+    width: 95px;
+    height: auto;
+    -webkit-filter: drop-shadow(15px 15px 15px #222);
+    filter: drop-shadow(15px 15px 15px #222);
+    display: block;
+    margin: 0 auto;
+}
+
+.header-text {
+    font-size: 48px;
+    font-weight: bold;
+    color: #fff;
+}
+
+footer {
+    text-align: center;
+    margin-top: 20px;
+    color: #7f8c8d;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.logo img {
+    max-height: 50px;
+}
+
+.header-title {
+    font-size: 32px;
+    white-space: nowrap;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+@media only screen and (max-width: 767px) {
+    body {
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        background-image: url(http://fe1kx-text2image.ru/image/background_mobile.jpg);
+        position: sticky;
+        top: 20px;
+    }
+
+    .header-title {
+        font-size: 24px;
+    }
+
+}
