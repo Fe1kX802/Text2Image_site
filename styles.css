@@ -105,6 +105,7 @@ footer {
 }
 
 .features-grid {
+    -webkit-appearance: none;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 20px;
@@ -112,6 +113,7 @@ footer {
 }
 
 .feature {
+    -webkit-appearance: none;
     background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1));
     -webkit-backdrop-filter: blur(20px);
     backdrop-filter: blur(20px);
@@ -124,22 +126,26 @@ footer {
 }
 
 .feature:hover {
+    -webkit-appearance: none;
     transform: translateY(-10px);
 }
 
 .feature i {
+    -webkit-appearance: none;
     font-size: 40px;
     margin-bottom: 10px;
     color: white;
 }
 
 .fade-in {
+    -webkit-appearance: none;
     opacity: 0;
     transform: translateY(20px);
     transition: opacity 0.5s ease-out, transform 0.5s ease-out;
 }
 
 .fade-in.visible {
+    -webkit-appearance: none;
     opacity: 1;
     transform: translateY(0);
 }
@@ -200,21 +206,88 @@ footer {
 
 @media only screen and (max-width: 767px) {
     body {
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: contain;
-        background-image: url(http://fe1kx-text2image.ru/image/background_mobile.jpg);
+        padding: 10px;
+        background: url(../image/background_mobile.jpg);
+    }
+
+    header {
+        padding: 15px;
+        flex-direction: relative;
         position: sticky;
-        top: 20px;
+        gap: 10px;
     }
 
-    .social-button {
-        width: 30px;
-        height: 30px;
-        font-size: 15px;
+    .header-logo {
+        width: 70px;
     }
-    .header-title {
+
+    .header-text {
         font-size: 24px;
+        text-align: center;
     }
 
+    .features-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .feature {
+        padding: 15px;
+    }
+
+    button#downloadBtn {
+        padding: 12px 24px;
+        font-size: 16px;
+        width: 100%;
+    }
+
+    .header-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .social-buttons {
+        flex-direction: row;
+        justify-content: center;
+
+    }
+
+    section {
+        padding: 15px;
+        margin: 10px 0;
+    }
+
+    .header-title {
+        font-size: 20px;
+        text-align: center;
+        margin: 10px 0;
+    }
+}
+
+/* Дополнительные оптимизации для маленьких экранов */
+@media only screen and (max-width: 360px) {
+    header {
+        flex-direction: relative;
+        position: sticky;
+    }
+
+    .header-text {
+        font-size: 20px;
+    }
+
+    button#downloadBtn {
+        font-size: 14px;
+        padding: 10px 20px;
+    }
+
+    .feature i {
+        font-size: 30px;
+    }
+}
+
+/* Улучшения производительности */
+.feature, .header, section {
+    will-change: transform;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
 }
