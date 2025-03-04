@@ -1,5 +1,5 @@
 body {
-    background: url(../image/background.jpg);
+    background: url(../image/background.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -74,7 +74,7 @@ footer {
         background-repeat: no-repeat;
         background-position: center;
         background-size: contain;
-        background-image: url(http://fe1kx-text2image.ru/image/background_mobile.jpg);
+        background-image: url(../image/background_mobile.jpg);
         position: sticky;
         top: 20px;
     }

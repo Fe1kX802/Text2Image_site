@@ -37,7 +37,6 @@ document.addEventListener('DOMContentLoaded', function() {
     sections.forEach(section => {
         observer.observe(section);
     });
-  // Сюда чисто свой код, там вставлять html через json, чтобы с бэка приходили данные и ты их из json брал, удобно короче и страница будет норм прогружаться, то есть html добавится после того, как док будет загружен и не будет ошибок в изображении страницы
 });
 
 
